@@ -1,0 +1,334 @@
+:root {
+    --primario: #88b7ec;
+    --primarioOscuro: #117c9d;
+    --blanco: #fff;
+    --negro: #000;
+    --secundario: rgb(67, 94, 212);
+    --fuentePrincipal: 'Staatliches', cursive;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /*1rem = 10px*/
+}
+
+*,*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/** Globales **/
+body {
+    background-color: var(--primario);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+p {
+    font-size: 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: var(--negro);
+}
+a {
+    text-decoration: none;
+}
+img {
+    width: 100%;
+}
+.contenedor {
+    max-width: 120rem;
+    margin: 0 1.5rem;
+}
+@media (min-width: 920px){
+    .contenedor {
+        margin: 0 auto;
+    }
+}
+h1, h2, h3{
+    text-align: center;
+    color: var(--negro);
+    font-family: var(--fuentePrincipal);
+}
+h1 {
+    font-size: 4rem;
+}
+h2 {
+    font-size: 3.2rem;
+}
+h3 {
+    font-size: 2.4rem;
+}
+
+/*Alert*/
+.contenidoalert {
+    font-size: 1.5rem;
+}
+
+/** Header **/
+/*Se conoce como BEM (Block Element Modifier) la forma de estructurar bloques y elementos en CSS*/
+.header {
+    background-color: var(--primarioOscuro);
+}
+.logo {
+    margin: 1rem;
+}
+.logo__img {
+    display: block;
+    width: auto;
+    margin: 0 auto;
+}
+
+/** Navegación **/
+@media (min-width: 768px){
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 768px){
+    .navegacion {
+        display: flex;
+        column-gap: 2rem;
+    }
+}
+.navegacion__enlace {
+    display: block;
+    text-align: center;
+    font-family: var(--fuentePrincipal);
+    color: var(--negro);
+    font-size: 3rem;
+}
+
+@media (min-width: 720px){
+    .navegacion__enlace {
+        font-size: 4rem;
+    }
+}
+
+.navegacion__enlace--activo, 
+.navegacion__enlace:hover {
+    color: var(--blanco);
+}
+
+/** Footer **/
+.footer {
+    background-color: var(--primarioOscuro);
+    padding: .5rem 0;
+    margin-top: 2rem;
+}
+.footer__texto {
+    font-family: var(--fuentePrincipal);
+    color: var(--negro);
+    font-size: 2rem;
+    text-align: center;
+    margin: auto;
+}
+.footer__social {
+    text-align: center;
+}
+.footer__social a {
+    color: var(--negro);
+    font-size: 4rem;
+}
+.footer__social a:hover {
+    color: var(--blanco);
+}
+
+/** Grid **/
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+@media (min-width: 768px){
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (min-width: 920px){
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media (min-width: 1200px){
+    .grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+/** Productos **/
+.producto {
+    background-color: var(--primarioOscuro);
+    padding: 2rem;
+}
+.producto:hover {
+    background-color: var(--secundario);
+    border-style: solid;
+    border-width: 0.5rem;
+    border-color: var(--blanco);
+    font-weight: 600;
+}
+.producto__nombre {
+    font-size: 2.5rem;
+    color: var(--negro);
+}
+.producto__precio {
+    font-size: 2.5rem;
+    color: var(--negro);
+}
+.producto__nombre, .producto__precio{
+    font-family: var(--fuentePrincipal);
+    margin: 1rem 0;
+    text-align: center;
+    line-height: 1.2;
+}
+.producto__imagen {
+    display: block;
+    margin: 0 auto;
+    border-radius: 20rem;
+    border-style: solid;
+    border-width: 0.1;
+    border-color: var(--blanco);
+}
+
+/** Gráficos **/
+.grafico {
+    min-height: 30rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column: 1 / 3;
+}
+
+/** Nosotros **/
+
+@media (min-width: 768px){
+    .nosotros {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 5rem;
+    }
+}
+.nosotros__contenido {
+    text-align: justify;
+}
+
+@media (min-width: 920px){
+    .nosotros__contenido {
+        width: 50rem;
+    }
+}
+
+.nosotros__imagen {
+    border: solid .3rem var(--negro);
+    border-radius: 2rem;
+}
+
+@media (min-width: 768px){
+    .nosotros__imagen {
+        width: 25rem;
+    }
+}
+
+/** Bloques **/
+@media (min-width: 768px){
+    .bloques {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10rem;
+    }  
+}
+
+.bloque {
+    text-align: justify;
+}
+.bloque__titulo {
+    margin: 0;
+}
+.bloque__imagen {
+    display: block;
+    width: auto;
+    margin: 0 auto;
+    filter: brightness(0%);
+}
+
+/** Página del Producto **/
+.camisa__contenido {
+    text-align: justify;
+}
+
+@media (min-width: 768px){
+    .camisa {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+@media (min-width: 920px){
+    .formulario {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+.formulario__campo {
+    display: block;
+    margin: 0 auto;
+    width: 30rem;
+    border: 1rem solid var(--primarioOscuro);
+    background-color: var(--primario);
+    color: var(--negro);
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    appearance: none;
+}
+.formulario__submit {
+    display: block;
+    margin: 0 auto;
+    background-color: var(--primarioOscuro);
+    border: none;
+    font-size: 2rem;
+    font-family: var(--fuentePrincipal);
+    padding: 2rem;
+    transition: background-color .3s ease;
+}
+@media (min-width: 920px){
+    .formulario__submit{
+        display: grid;
+        margin: 0;
+        grid-column: 1 / 3;
+    }
+    .formulario__campo{
+        display: grid;
+        margin: 0;
+    }
+}
+.formulario__submit:hover {
+    cursor: pointer;
+    color: var(--blanco);
+    background-color: var(--negro);
+}
+
+/* Estilo para el botón de subir */
+.ir-arriba-btn {
+    display: none; /* Oculto inicialmente */
+    position: fixed; /* Posición fija en la ventana */
+    z-index: 99; /* Asegura que esté sobre otros elementos */
+    border: none;
+    border-radius: 1rem;
+    background-color: var(--negro);
+    color: var(--blanco);
+    font-size: 2rem;
+    bottom: 5rem;
+    right: 2rem;
+    padding: 1rem;
+}
+
+.ir-arriba-btn:hover {
+    cursor: pointer;
+    background-color: var(--blanco);
+    color: var(--negro);
+}

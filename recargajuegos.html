@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es" data-location="QUEVEDO">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jose Zambrano">
+    <meta name="description" content="Tienda de Servicios de Entretenimiento">
+    <title>Punto de Pagos JZ</title>
+    <link rel="icon" type="img/logo-principal" href="build/img/logo-principal.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;600&family=Staatliches&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="build/css/app.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <a class="logo" href="index.html">
+            <picture>
+                <source srcset="build/img/logo-principal.webp" type="image/webp">
+                <source srcset="build/img/logo-principal.png" type="image/png">
+                <img class="logo__img" loading="lazy" src="build/img/logo-principal.png" alt=logo-principal">
+            </picture>
+        </a>
+        <nav class="navegacion">
+            <a class="navegacion__enlace navegacion__enlace--activo" href="index.html">Tienda</a>
+            <a class="navegacion__enlace" href="promociones.html">Promociones</a>
+            <a class="navegacion__enlace" href="nosotros.html">Nosotros</a>
+        </nav>
+    </header>
+
+    <main class="contenedor">
+        <h1>Proceso de compra</h1>
+        <div class="camisa">
+            <picture>
+                <source srcset="build/img/carrito.webp" type="image/webp">
+                <source srcset="build/img/carrito.png" type="image/png">
+                <img class="camisa__imagen" loading="lazy" src="build/img/carrito.png" alt=carrito">
+            </picture>
+            <div class="camisa__contenido">
+                <p>Por favor seleccione el videojuego y el valor a recargar:</p>
+                <form class="formulario">
+                    <select id="producto" class="formulario__campo">
+                        <option value="0" disabled selected>--- Seleccione videojuego ---</option>
+                        <option value="Free Fire (Id Jugador)">Free Fire (Id Jugador)</option>
+                    </select>
+                    <select id="cantidad" class="formulario__campo">
+                        <option value="0" disabled selected>--- Seleccione valor ---</option>
+                        <option value="Tarjeta Semanal $ 2,50">Tarjeta Semanal $ 2,50</option>
+                        <option value="Tarjeta Semanal $ 10,50">Tarjeta Mensual $ 10,50</option>
+                        <option value="100 + 10 diamantes $ 1,50">100 + 10 diamantes $ 1,50</option>
+                        <option value="310 + 31 diamantes $ 3,50">310 + 31 diamantes $ 3,50</option>
+                        <option value="520 + 52 diamantes $ 5,50">520 + 52 diamantes $ 5,50</option>
+                        <option value="1060 + 106 diamantes $ 10,50">1060 + 106 diamantes $ 10,50</option>
+                        <option value="2180 + 218 diamantes $ 20,50">2180 + 218 diamantes $ 20,50</option>
+                        <option value="5600 + 560 diamantes $ 51">5600 + 560 diamantes $ 51</option>
+                    </select>
+                    <button class="formulario__submit" type="button" onclick="enviarMensaje('recargajg')">Comprar</button>
+                </form>
+                <p>Nota: Al dar clic en COMPRAR serás redireccionado a WhatsApp, para continuar con el proceso.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__social">
+            <p class="footer__texto">Síguenos en Nuestras Redes Sociales</p>
+            
+            <a href="https://www.facebook.com/internet.jztv/" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+
+            <a href="https://www.instagram.com/puntodepagos_jz/" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="https://wa.me/593963177642/" target="_blank"">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+
+            <a href="https://t.me/puntodepagosjz/" target="_blank">
+                <i class="fab fa-telegram"></i>
+            </a>
+        </div><!-- .footer__social -->
+
+        <p class="footer__texto">Copyright &copy; 2024 Punto de Pagos JZ - Todos los derechos reservados.</p>
+
+    </footer>
+
+    <!-- Botón para subir -->
+    <button class="ir-arriba-btn">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+</body>
+
+<script src="build/js/bundle.min.js"></script>
+
+</html>

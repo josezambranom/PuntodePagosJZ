@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es" data-location="QUEVEDO">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jose Zambrano">
+    <meta name="description" content="Tienda de Servicios de Entretenimiento">
+    <title>Punto de Pagos JZ</title>
+    <link rel="icon" type="img/logo-principal" href="build/img/logo-principal.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;600&family=Staatliches&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="build/css/app.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <a class="logo" href="index.html">
+            <picture>
+                <source srcset="build/img/logo-principal.webp" type="image/webp">
+                <source srcset="build/img/logo-principal.png" type="image/png">
+                <img class="logo__img" loading="lazy" src="build/img/logo-principal.png" alt=logo-principal">
+            </picture>
+        </a>
+        <nav class="navegacion">
+            <a class="navegacion__enlace navegacion__enlace--activo" href="index.html">Tienda</a>
+            <a class="navegacion__enlace" href="promociones.html">Promociones</a>
+            <a class="navegacion__enlace" href="nosotros.html">Nosotros</a>
+        </nav>
+    </header>
+
+    <main class="contenedor">
+        <h1>Proceso de compra</h1>
+        <div class="camisa">
+            <picture>
+                <source srcset="build/img/carrito.webp" type="image/webp">
+                <source srcset="build/img/carrito.png" type="image/png">
+                <img class="camisa__imagen" loading="lazy" src="build/img/carrito.png" alt=carrito">
+            </picture>
+            <div class="camisa__contenido">
+                <p>Por favor selecciona la plataforma y cantidad que deseas adquirir a continuación:</p>
+                <form class="formulario">
+                    <select id="producto" class="formulario__campo">
+                        <option value="0" disabled selected>--- Seleccione plataforma ---</option>
+                        <option value="Amazon Prime Video Cuenta Completa">Amazon Prime Video Cuenta Completa</option>
+                        <option value="Amazon Prime 1 Pantalla">Amazon Prime Video 1 Pantalla</option>
+                        <option value="Amazon Prime 2 Pantallas">Amazon Prime Video 2 Pantallas</option>
+                        <option value="Canva Pro">Canva Pro</option>
+                        <option value="Directv GO">Directv GO</option>
+                        <option value="Directv GO + ECDF">Directv GO + ECDF</option>
+                        <option value="Disney Completa">Disney Completa</option>
+                        <option value="Disney 1 Pantalla">Disney 1 Pantalla</option>
+                        <option value="Disney 2 Pantallas">Disney 2 Pantallas</option>
+                        <option value="HBOmax Completa<">HBOmax Completa</option>
+                        <option value="HBOmax 1 Pantalla">HBOmax 1 Pantalla</option>
+                        <option value="HBOmax 2 Pantallas">HBOmax 2 Pantallas</option>
+                        <option value="Magis TV 1 Mes">Magis TV 1 Mes</option>
+                        <option value="Magis TV 3 Meses">Magis TV 3 Meses</option>
+                        <option value="Magis TV 6 + 1 Meses">Magis TV 6 + 1 Meses</option>
+                        <option value="Magis TV 1 Año + 2 Meses">Magis TV 1 Año + 2 Meses</option>
+                        <option value="Microsoft Office 365 1 Año">Microsoft Office 365 1 Año</option>
+                        <option value="Netflix Completa">Netflix Completa</option>
+                        <option value="Netflix 1 Pantalla">Netflix 1 Pantalla</option>
+                        <option value="Netflix 2 Pantallas">Netflix 2 Pantallas</option>
+                        <option value="Paramount Completa">Paramount Completa</option>
+                        <option value="Paramount 1 Pantalla">Paramount 1 Pantalla</option>
+                        <option value="Plex Completa">Plex Completa</option>
+                        <option value="Plex 1 Pantalla">Plex 1 Pantalla</option>
+                        <option value="Spotify 1 Mes">Spotify 1 Mes</option>
+                        <option value="Spotify 3 Meses">Spotify 3 Meses</option>
+                        <option value="Star Completa">Star Completa</option>
+                        <option value="Star 1 Pantalla">Star 1 Pantalla</option>
+                        <option value="Star 2 Pantallas">Star 2 Pantallas</option>
+                        <option value="Tele Latino 1 Mes">Tele Latino 1 Mes</option>
+                        <option value="Tele Latino 3 Meses">Tele Latino 3 Meses</option>
+                        <option value="Tele Latino 6 Meses">Tele Latino 6 Meses</option>
+                        <option value="Vix Premium">Vix Premium</option>
+                        <option value="Youtube Premium">Youtube Premium</option>
+                        <option value="Youtube Premium 3 Meses">Youtube Premium 3 Meses</option>
+                    </select>
+                    <input class="formulario__campo" id="cantidad" type="number" placeholder="Cantidad" min="1">
+                    <button class="formulario__submit" type="button" onclick="enviarMensaje('nor')">Comprar</button>
+                </form>
+                <p>Nota: Al dar clic en COMPRAR serás redireccionado a WhatsApp, para continuar con el proceso.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__social">
+            <p class="footer__texto">Síguenos en Nuestras Redes Sociales</p>
+            
+            <a href="https://www.facebook.com/internet.jztv/" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+
+            <a href="https://www.instagram.com/puntodepagos_jz/" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="https://wa.me/593963177642/" target="_blank"">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+
+            <a href="https://t.me/puntodepagosjz/" target="_blank">
+                <i class="fab fa-telegram"></i>
+            </a>
+        </div><!-- .footer__social -->
+
+        <p class="footer__texto">Copyright &copy; 2024 Punto de Pagos JZ - Todos los derechos reservados.</p>
+
+    </footer>
+
+    <!-- Botón para subir -->
+    <button class="ir-arriba-btn">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+</body>
+
+<script src="build/js/bundle.min.js"></script>
+
+</html>
