@@ -1,10 +1,25 @@
 :root {
-    --primario: #88b7ec;
-    --primarioOscuro: #117c9d;
+    /* --primario: #88b7ec; */
+    --primario: #c9e1fc;
+    /* --primarioOscuro: #117c9d; */
+    --primarioOscuro: #11949d;
     --blanco: #fff;
     --negro: #000;
-    --secundario: rgb(67, 94, 212);
-    --fuentePrincipal: 'Staatliches', cursive;
+    --secundario: rgb(72, 179, 228);
+    /* --secundario: rgb(67, 94, 212); */
+    --fuentePrincipal: 'Staatliches';
+}
+
+@keyframes rebote {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-4rem);
+    }
+    60% {
+      transform: translateY(-2rem);
+    }
 }
 
 html {
@@ -28,6 +43,7 @@ p {
     font-size: 2rem;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: var(--negro);
+    text-align: justify;
 }
 a {
     text-decoration: none;
@@ -38,6 +54,9 @@ img {
 .contenedor {
     max-width: 120rem;
     margin: 0 1.5rem;
+}
+.negrita {
+    font-weight: 700;
 }
 @media (min-width: 920px){
     .contenedor {
@@ -161,20 +180,21 @@ h3 {
 .producto {
     background-color: var(--primarioOscuro);
     padding: 2rem;
+    border-style: solid;
+    border-width: 0.3rem;
+    border-radius: 2rem;
+    border-color: var(--negro);
 }
 .producto:hover {
     background-color: var(--secundario);
-    border-style: solid;
-    border-width: 0.5rem;
-    border-color: var(--blanco);
-    font-weight: 600;
+    animation: rebote 1.5s infinite;
 }
 .producto__nombre {
     font-size: 2.5rem;
-    color: var(--negro);
+    color: var(--blanco);
 }
 .producto__precio {
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: var(--negro);
 }
 .producto__nombre, .producto__precio{
